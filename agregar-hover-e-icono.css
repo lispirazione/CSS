@@ -1,3 +1,7 @@
+/********************************************
+    Suponiendo que la class es:
+    .elementor-element.elementor-widget-image-box
+*********************************************/
 
 
 .elementor-element.elementor-widget-image-box {
@@ -108,3 +112,79 @@
         bottom: -25px;
     }
 }
+
+
+
+
+/********************************************
+    Si prefieres usar un icono de imagen *
+*********************************************/
+
+.elementor-element.elementor-widget-image-box.image-icon::after {
+    content: '';
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>') center/contain no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+/* O con una imagen externa */
+.elementor-element.elementor-widget-image-box.custom-icon::after {
+    content: '';
+    background: url('https://tusitio.com/wp-content/uploads/popup-icon.png') center/contain no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/********************************************
+    Para usar Font Awesome (si ya lo tienes instalado):
+*********************************************/
+
+.elementor-element.elementor-widget-image-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.elementor-element.elementor-widget-image-box .fa-popup-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.elementor-element.elementor-widget-image-box:hover .fa-popup-icon {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
